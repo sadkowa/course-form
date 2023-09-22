@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: Roboto, Verdana, Tahoma, sans-serif;
         font-size: 1.6rem;
+        background-color: #f2f2f2;
     }
 `;
 
