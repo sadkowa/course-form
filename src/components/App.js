@@ -9,7 +9,9 @@ import { ThemeProvider } from 'styled-components';
 import { Button } from './Button';
 import { Label } from './Label';
 import { TextInput } from './TextInput';
-import SubmitInput from './SubmitInput/SubmitInput';
+import { SubmitInput } from './SubmitInput';
+import { Card } from './Card';
+import { ProgressBar } from './ProgressBar';
 
 const App = () => (
     <>
@@ -18,17 +20,22 @@ const App = () => (
         <ThemeProvider theme={themeSettings}>
             <Button>{'>'}</Button>
             <Button>{'<'}</Button>
-            <Label label='firstName'>First name
-                <TextInput name='firstName' />
-            </Label>
-            <Label label='Second name'>
-                <TextInput name='secondName' />
-            </Label>
-            <Label label='Email'>
-                <TextInput name='email' />
-            </Label>
+            <Card>
+                <Label label='firstName'>First Name
+                    <TextInput name='firstName' />
+                </Label>
+                <Label label='lastName'>Last Name
+                    <TextInput name='lastName' />
+                </Label>
+                <Label label='email'>Email
+                    <TextInput name='email' />
+                </Label>
+                <Label>
+                    <SubmitInput value='Submit' />
+                </Label>
+            </Card>
             <Label>
-                <SubmitInput value='Submit' />
+                <ProgressBar value="33" max="100" />
             </Label>
             {/* <Input type='submit'/>
             <Input type='radio'/>

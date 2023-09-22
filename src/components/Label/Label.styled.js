@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const DefaultStyledLabel = styled.label`
-    margin: 40px;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
