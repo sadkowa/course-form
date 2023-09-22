@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 const DefaultStyledButton = styled.button`
-    padding: 8px 50px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-weight: bold;
     /* margin: ${({ theme }) => theme.primary.margin};
     border: ${({ theme }) => theme.primary.border};
     border-radius: ${({ theme }) => theme.primary.borderRadius};
@@ -16,7 +18,9 @@ const DefaultStyledButton = styled.button`
     }
     &:active {
         ${({ theme }) => theme.pressed}
-    }
+    };
+    font-size: 20px;
+
 `
 
 const StyledButton = styled(DefaultStyledButton)``
