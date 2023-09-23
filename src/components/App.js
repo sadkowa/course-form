@@ -1,48 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ResetStyle from './global/Reset';
 import GlobalStyle from './global/Global';
 
 import themeSettings from './global/theme';
 import { ThemeProvider } from 'styled-components';
+import PageContext from '../context/context';
 
-import { Button } from './Button';
-import { Label } from './Label';
-import { TextInput } from './TextInput';
-import { SubmitInput } from './SubmitInput';
-import { Card } from './Card';
-import { ProgressBar } from './ProgressBar';
+import { Page1, Page2, Page3 } from './Pages';
 
-const App = () => (
+const App = () => {
+
+    const [activePage, setActivePage] = useState(1)
+    const { Provider } = PageContext
+
+    const changePage = (variant) => {
+        if (variant === 'right') {
+            setActivePage(prevState => prevState + 1)
+        }
+        if (variant === 'left') {
+            setActivePage(prevState => prevState - 1)
+
+        }
+        console.log(variant)
+    }
+
+    return (
     <>
         <ResetStyle />
         <GlobalStyle />
         <ThemeProvider theme={themeSettings}>
-            <Button>{'>'}</Button>
-            <Button>{'<'}</Button>
-            <Card>
-                <Label label='firstName'>First Name
-                    <TextInput name='firstName' />
-                </Label>
-                <Label label='lastName'>Last Name
-                    <TextInput name='lastName' />
-                </Label>
-                <Label label='email'>Email
-                    <TextInput name='email' />
-                </Label>
-                <Label>
-                    <SubmitInput value='Submit' />
-                </Label>
-            </Card>
-            <Label>
-                <ProgressBar value="33" max="100" />
-            </Label>
-            {/* <Input type='submit'/>
-            <Input type='radio'/>
-            <Input type='checkbox'/> */}
+                <Provider value={changePage}>
+                    {activePage === 1 && <Page1  />}
+                    {activePage === 2 && <Page2 />}
+                    {activePage === 3 && <Page3 />}
+                </Provider>
+                {/* <Input type='submit'/> */}
+                {/* <Input type='radio'/> */}
+                {/* <Input type='checkbox'/> */}
         </ThemeProvider>
 
     </>
-);
+    )
+};
 
 export default App;

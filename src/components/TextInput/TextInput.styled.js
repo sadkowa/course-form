@@ -11,9 +11,7 @@ const DefaultStyledTextInput = styled.input`
         outline: none;
         ${({ theme }) => theme.pressed}
     }
-    &:checked {
-        color:red
-    }
+   
 `
 
 const StyledTextInput = styled(DefaultStyledTextInput)``

@@ -4,7 +4,7 @@ import { Label } from "../Label";
 
 const ProgressBar = (props) => {
 
-    return  <StyledProgressBar value="33" max='100' />
+    return  <StyledProgressBar value={props.value} max={props.max} />
         
 }
 

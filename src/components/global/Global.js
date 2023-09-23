@@ -2,6 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 import robotoWoff from './../../fonts/roboto.woff';
 import robotoWoff2 from './../../fonts/roboto.woff2';
 
+import photo from './../../images/buildings-69971_1280.jpg'
+
+
 const GlobalStyle = createGlobalStyle`
  @font-face {
         font-family: 'Roboto';
@@ -17,7 +20,10 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: Roboto, Verdana, Tahoma, sans-serif;
         font-size: 1.6rem;
-        
+        background-image: url(${photo});
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain
     }
 `;
 

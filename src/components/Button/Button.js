@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import StyledButton from "./Button.styled";
+import PageContext from "../../context/context";
 
-const Button = (props) => {
-    return <StyledButton>{props.children}</StyledButton>
-}
+const Button = (({ variant = '', children }) => {
+    const changePage = useContext(PageContext)
+
+    return <StyledButton onClick={()=>changePage(variant)} variant={variant}>{children}</StyledButton>
+})
 
 export default Button 

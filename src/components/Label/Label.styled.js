@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const DefaultStyledLabel = styled.label`
-    margin: 30px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    width: 70%;
 `
 
 const StyledLabel = styled(DefaultStyledLabel)``

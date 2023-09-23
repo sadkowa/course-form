@@ -1,10 +1,10 @@
 import React from "react";
 import StyledSubmitInput from "./SubmitInput.styled";
 
-const SubmitInput = ({ value }) => {
+const SubmitInput = ({ value, name }) => {
 
     return (
-        <StyledSubmitInput type='submit' value={value} />
+        <StyledSubmitInput type='submit' value={value} name={name}/>
     )
 }
 

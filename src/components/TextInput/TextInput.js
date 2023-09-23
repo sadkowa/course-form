@@ -4,7 +4,8 @@ import StyledTextInput from "./TextInput.styled";
 const TextInput = ({ name }) => {
 
     return (
-        <StyledTextInput type='text' name={name} />
+        <><StyledTextInput type='text' name={name} />
+        </>
     )
 }
 

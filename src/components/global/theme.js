@@ -1,8 +1,5 @@
-import { css } from "styled-components"
-
 const themeSettings = {
     primary: {
-        // margin: '10px',
         border: 'none',
         backgroundColor: `#f2f2f2`,
         boxShadow: `5px 5px 5px #aeaeae,
