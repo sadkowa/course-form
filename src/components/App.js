@@ -5,7 +5,7 @@ import GlobalStyle from './global/Global';
 
 import themeSettings from './global/theme';
 import { ThemeProvider } from 'styled-components';
-import PageContext from '../context/context';
+import {PageContext} from '../context/context';
 
 import { Page1, Page2, Page3, Page4 } from './Pages';
 

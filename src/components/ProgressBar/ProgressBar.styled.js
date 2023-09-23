@@ -3,8 +3,9 @@ import styled from "styled-components";
 const StyledProgressBar = styled.progress`
     
     background-color: white;
-    width: 100%;
-    margin-top: 70px;
+    width: 80%;
+    position: absolute;
+    bottom: 30px;
 
     &[value]::-webkit-progress-bar {
 

@@ -8,7 +8,7 @@ import { Header } from "../Header";
 import { Img } from "../Img";
 import { Heading } from "../Heading";
 import { SubmitInput } from "../SubmitInput";
-import { CardTitle } from "../CardTitle";
+import { CardTitle } from "../Card/CardTitle";
 import { Form } from "../Form";
 
 

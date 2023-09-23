@@ -1,5 +1,6 @@
 import React from "react"
 
 const PageContext = React.createContext()
+const ListContext = React.createContext()
 
-export default PageContext
+export {PageContext, ListContext}

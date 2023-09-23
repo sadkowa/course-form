@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import StyledButton from "./Button.styled";
-import PageContext from "../../context/context";
+import {PageContext} from "../../context/context";
 
 const Button = (({ variant = '', children }) => {
     const changePage = useContext(PageContext)
