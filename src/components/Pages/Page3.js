@@ -9,6 +9,8 @@ import { Img } from "../Img";
 import { Heading } from "../Heading";
 import { SubmitInput } from "../SubmitInput";
 import { TextInput } from "../TextInput";
+import { CardTitle } from "../CardTitle";
+
 
 const Page3 = () => {
     return (

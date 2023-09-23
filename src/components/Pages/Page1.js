@@ -7,6 +7,7 @@ import { ProgressBar } from "../ProgressBar";
 import { Header } from "../Header";
 import { Img } from "../Img";
 import { Heading } from "../Heading";
+import { CardTitle } from "../CardTitle";
 
 const Page1 = () => {
     return (
@@ -16,7 +17,7 @@ const Page1 = () => {
                 <Img />
             </Header>
             <Card>
-                <div>Choose your language level</div>
+                <CardTitle>Choose your language level</CardTitle>
                 <ul>
                     <li>A1</li>
                     <li>A2</li>

@@ -7,7 +7,6 @@ const themeSettings = {
         borderRadius: '30px',
         color: '#454545',
         fontSize: '1.5rem',
-        letterSpacing: ' 1px',
         transition: '0.5s ease',
         cursor: 'pointer',
     }

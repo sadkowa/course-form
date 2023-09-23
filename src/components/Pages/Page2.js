@@ -8,6 +8,9 @@ import { Header } from "../Header";
 import { Img } from "../Img";
 import { Heading } from "../Heading";
 import { SubmitInput } from "../SubmitInput";
+import { CardTitle } from "../CardTitle";
+import { Form } from "../Form";
+
 
 const Page2 = () => {
     return (
@@ -18,19 +21,19 @@ const Page2 = () => {
             </Header>
             <Card>
             <Button variant="left">{'<'}</Button>
-                <h3>Pick a course</h3>
-                <form>
-                    <label htmlFor=""> A1 speaking
+                <CardTitle>Pick a course</CardTitle>
+                <Form>
+                    <Label > A1 speaking
                         <input type="checkbox" />
-                    </label>
-                    <br />
-                    <label htmlFor=""> A1 listening
+                    </Label>
+
+                    <Label > A1 listening
                         <input type="checkbox" />
-                    </label>
+                    </Label>
             
                         <SubmitInput value="Buy"/>
            
-                </form>
+                </Form>
 
                 <Label>
                     <ProgressBar value="66" max="100" />

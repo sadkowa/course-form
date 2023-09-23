@@ -4,7 +4,6 @@ import StyledLabel from "./Label.styled";
 const Label = (props) => {
     const onClick = (e) => {
         e.preventDefault()
-        console.log('test')
     }
 
     return (
