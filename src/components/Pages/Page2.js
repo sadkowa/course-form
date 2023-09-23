@@ -18,7 +18,7 @@ const Page2 = () => {
             </Header>
             <Card>
             <Button variant="left">{'<'}</Button>
-                <h2>Choose your language level</h2>
+                <h3>Pick a course</h3>
                 <form>
                     <label htmlFor=""> A1 speaking
                         <input type="checkbox" />
@@ -27,9 +27,9 @@ const Page2 = () => {
                     <label htmlFor=""> A1 listening
                         <input type="checkbox" />
                     </label>
-                    <Label>
+            
                         <SubmitInput value="Buy"/>
-                    </Label>
+           
                 </form>
 
                 <Label>

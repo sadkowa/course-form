@@ -14,7 +14,7 @@ const Page3 = () => {
     return (
         <Page>
             <Header>
-                <Heading>Fill in the form to set the first lesson</Heading>
+                <Heading>Fill in the form to set the first trial lesson</Heading>
                 <Img />
             </Header>
             <Card>
@@ -32,6 +32,8 @@ const Page3 = () => {
                 <Label>
                     <ProgressBar value="100" max="100" />
                 </Label>
+                <Button variant="right">{'>'}</Button>
+
             </Card>
 
         </Page>

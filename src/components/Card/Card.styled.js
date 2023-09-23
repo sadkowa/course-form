@@ -8,10 +8,11 @@ const StyledCard = styled.div`
     background-color: #f2f2f2;
     width: 80%;
     max-width: 600px;
+    min-height: 300px;
     margin: 40px auto;
     padding: 20px 0;
     box-shadow:  5px 5px 5px #aeaeae,
-             -5px -5px 5px #eeeeee
+                 -5px -5px 5px #eeeeee
 `
 
 export default StyledCard

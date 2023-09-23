@@ -12,7 +12,6 @@ const DefaultStyledSubmitInput = styled.input`
         ${({ theme }) => theme.pressed}
     };
     margin: 40px auto 10px; 
-
 `
 
 const StyledSubmitInput = styled(DefaultStyledSubmitInput)``

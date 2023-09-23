@@ -7,7 +7,7 @@ import themeSettings from './global/theme';
 import { ThemeProvider } from 'styled-components';
 import PageContext from '../context/context';
 
-import { Page1, Page2, Page3 } from './Pages';
+import { Page1, Page2, Page3, Page4 } from './Pages';
 
 const App = () => {
 
@@ -34,6 +34,7 @@ const App = () => {
                     {activePage === 1 && <Page1  />}
                     {activePage === 2 && <Page2 />}
                     {activePage === 3 && <Page3 />}
+                    {activePage === 4 && <Page4 />}
                 </Provider>
                 {/* <Input type='submit'/> */}
                 {/* <Input type='radio'/> */}
