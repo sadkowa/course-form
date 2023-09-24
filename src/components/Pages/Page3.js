@@ -10,17 +10,20 @@ import { Heading } from "../Heading";
 import { SubmitInput } from "../SubmitInput";
 import { TextInput } from "../TextInput";
 import { CardTitle } from "../Card/CardTitle";
+import { Form } from "../Form";
 
 
 const Page3 = () => {
     return (
         <Page>
             <Header>
-                <Heading>Fill in the form to set the first trial lesson</Heading>
+                <Heading>Fill in the form to schedule the first trial lesson</Heading>
                 <Img />
             </Header>
             <Card>
                 <Button variant="left">{'<'}</Button>
+
+                <Form>
                 <Label label='firstName'>First Name
                     <TextInput name='firstName' />
                 </Label>
@@ -31,6 +34,7 @@ const Page3 = () => {
                     <TextInput name='email' />
                 </Label>
                     <SubmitInput name='submit' value='Submit' />
+                </Form>
                 <Label>
                     <ProgressBar value="100" max="100" />
                 </Label>

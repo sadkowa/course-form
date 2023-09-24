@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 const DefaultStyledTextInput = styled.input`
-    padding: 5px 50px;
-    margin-top: 10px;
-    width: 100%;
-    
     ${({ theme }) => theme.primary}
   
     &:focus {
         outline: none;
         ${({ theme }) => theme.pressed}
+    };
+    @media ${props => props.theme.media.mobile} {
+        width: 100%;
+        padding: 2px;  
+        margin-top: 10px;
+        font-size: 1.3rem;
     }
    
 `

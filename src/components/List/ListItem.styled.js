@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledListItem = styled.li`
-    margin-top: 10px;
     cursor: pointer;
     ${({ theme }) => theme.primary}
     &:hover {
@@ -10,6 +9,12 @@ const StyledListItem = styled.li`
     &:active {
         ${({ theme }) => theme.pressed}
     };
+    @media ${props => props.theme.media.mobile} {
+        width: 100%;
+        padding: 2px;  
+        margin: 0 auto 15px; 
+        font-size: 1.3rem;
+    }
 `
 
 export default StyledListItem

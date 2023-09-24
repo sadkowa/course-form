@@ -3,9 +3,12 @@ import flag from './../../images/flag.png'
 
 const StyledImg = styled.img.attrs({ src: `${flag}` })`
     position: absolute;
-    top: 30px;
-    right: 10px;
-    width: 100px
+    z-index: -1;
+    @media ${props => props.theme.media.mobile} {
+        top: 20px;
+        right: 20px;
+        width: 70px;
+}
 `
 
 export default StyledImg

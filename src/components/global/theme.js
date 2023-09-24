@@ -6,7 +6,6 @@ const themeSettings = {
                     -5px -5px 5px #ffffff`,
         borderRadius: '30px',
         color: '#454545',
-        fontSize: '1.5rem',
         transition: '0.5s ease',
         cursor: 'pointer',
     }
@@ -14,7 +13,14 @@ const themeSettings = {
     pressed: {
         boxShadow: `inset 5px 5px 5px #aeaeae,
             inset -5px -5px 5px #ffffff`,
-    }
+    },
+
+    media: {
+        mobile: 'screen and (max-width: 599px)',
+        tablet: 'screen and (min-width: 600px)'
+        + 'and (max-width: 1199px)',
+        desktop: 'screen and (min-width: 1200px)',
+        }
 }
 
 

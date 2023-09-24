@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledDropdown = styled.button`
-    padding: 0 50px;  
     ${({ theme }) => theme.primary}
   
     &:hover {
@@ -11,7 +10,12 @@ const StyledDropdown = styled.button`
     &:active {
         ${({ theme }) => theme.pressed}
     };
-    margin: 40px auto 10px; 
+    @media ${props => props.theme.media.mobile} {
+        width: 60%;
+        padding: 3px;  
+        margin: 20px auto 10px; 
+        font-size: 1.3rem;
+    }    
 `
 
 export default StyledDropdown

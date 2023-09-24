@@ -5,14 +5,14 @@ import GlobalStyle from './global/Global';
 
 import themeSettings from './global/theme';
 import { ThemeProvider } from 'styled-components';
-import {PageContext} from '../context/context';
+import { CurrentPageContext } from '../context/context';
 
 import { Page1, Page2, Page3, Page4 } from './Pages';
 
 const App = () => {
 
-    const [activePage, setActivePage] = useState(1)
-    const { Provider } = PageContext
+    const [activePage, setActivePage] = useState(2)
+    const { Provider } = CurrentPageContext
 
     const changePage = (variant) => {
         if (variant === 'right') {
@@ -20,9 +20,7 @@ const App = () => {
         }
         if (variant === 'left') {
             setActivePage(prevState => prevState - 1)
-
         }
-        console.log(variant)
     }
 
     return (
@@ -36,11 +34,7 @@ const App = () => {
                     {activePage === 3 && <Page3 />}
                     {activePage === 4 && <Page4 />}
                 </Provider>
-                {/* <Input type='submit'/> */}
-                {/* <Input type='radio'/> */}
-                {/* <Input type='checkbox'/> */}
         </ThemeProvider>
-
     </>
     )
 };

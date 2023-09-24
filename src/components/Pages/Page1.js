@@ -10,26 +10,40 @@ import { Heading } from "../Heading";
 import { CardTitle } from "../Card/CardTitle";
 import { List } from "../List";
 import { ListItem } from "../List";
-
-import { englishLevels } from "../../providers/data";
 import { Dropdown } from "../Dropdown";
 
-// import { ListContext } from "../../context/context";
+import { englishLevels } from "../../providers/data";
+
+import { ActiveListContext } from "../../context/context";
+import { LangLevelContext } from "../../context/context";
 
 
 
 const Page1 = () => {
+    const initLevel = `${englishLevels[0].mark} - ${englishLevels[0].name}`
+    const [activeList, setActiveList] = useState(false)
+    const [pickedLevel, setPickedLevel] = useState(initLevel)
 
-    const [langLevel, setLangLevel] = useState(null)
-    // const { Provider } = ListContext
+    const { Provider: ActiveListProvider } = ActiveListContext
+    const { Provider: LangLevelProvider } = LangLevelContext
 
-    // const changeLangLevel = (name)=> {
-    //     setLangLevel(name)
-// }
+    const changeLangLevel = (name) => {
+        setPickedLevel(name)
+    }
+    const changeActiveList = () => {
+        setActiveList(prevState => !prevState)
+    }
+
 const renderListItems = englishLevels.map(({ id, mark, name }) => {
-    return <ListItem key={id}>{mark} - {name}</ListItem>
+    return (
+        <LangLevelProvider value={changeLangLevel}>
+            <ListItem key={id} mark={mark} name={name}>{mark} - {name}</ListItem>
+        </LangLevelProvider>
+    )
 })
 
+
+    // const dropdownContent= pickedLevel ? pickedLevel : `${englishLevels[0].mark} - ${englishLevels[0].name}`
 
     return (
         <Page>
@@ -39,12 +53,12 @@ const renderListItems = englishLevels.map(({ id, mark, name }) => {
             </Header>
             <Card>
                 <CardTitle>Choose your English level</CardTitle>
-                {!langLevel && <Dropdown>{englishLevels[0].mark} - {englishLevels[0].name} <span style={{ marginLeft: '30px' }}>⇩</span></Dropdown>}
-                {/* <Provider value={changeLangLevel}> */}
-                {langLevel && <List>
+                <ActiveListProvider value={changeActiveList}>
+                    {!activeList && <Dropdown>{pickedLevel}&#x25BC;</Dropdown>}
+                    {activeList && <List>
                     {renderListItems}
                 </List>}
-                {/* </Provider> */}
+                </ActiveListProvider>
                 <Label>
                     <ProgressBar value="33" max="100" />
                 </Label>

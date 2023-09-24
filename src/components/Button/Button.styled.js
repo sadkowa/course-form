@@ -2,10 +2,7 @@ import styled, {css} from "styled-components";
 
 const DefaultStyledButton = styled.button`
     position: absolute;
-    padding: 10px 20px;
-    margin-bottom:30px;
-    border-radius: 50%;
-    bottom:10%;
+    top:50%;
     transform: translateY(-50%);
 
     ${({ theme }) => theme.primary}
@@ -16,7 +13,10 @@ const DefaultStyledButton = styled.button`
     &:active {
         ${({ theme }) => theme.pressed}
     };
-    font-size: 20px;
+    @media ${props => props.theme.media.mobile} {
+        padding: 8px 8px;
+        font-size: 1.3rem;
+}
 `
 
 const StyledButton = styled(DefaultStyledButton)`

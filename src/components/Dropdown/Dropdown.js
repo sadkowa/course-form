@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import StyledDropdown from "./Dropdown.styled";
-// import { ListContext } from "../../context/context";
+import { ActiveListContext } from "../../context/context";
 
 const Dropdown = ({children }) => {
-//     const clickHandler = useContext(ListContext)
-// onClick={() => clickHandler(name)}
+    const changeActiveList = useContext(ActiveListContext)
 
     return (
-        <StyledDropdown  type='submit' >{children}</StyledDropdown>
+        <StyledDropdown onClick={changeActiveList} type='submit' >{children}</StyledDropdown>
     )
 }
 

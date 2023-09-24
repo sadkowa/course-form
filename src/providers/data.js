@@ -8,6 +8,6 @@ const englishLevels = [
     { id: 7, mark: 'C2', name: 'Proficient' },
 ]
 
-const courses = ['Group classes', 'Personal Tutoring', 'Self-study course']
+const courses = ['Group classes - Spoken English Course', 'Personal Tutoring - Speaking Sessions"', 'Self-study course - Vocabulary Classes']
 
 export { englishLevels, courses }
