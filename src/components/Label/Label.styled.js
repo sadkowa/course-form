@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const DefaultStyledLabel = styled.label`
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +11,12 @@ const DefaultStyledLabel = styled.label`
     }
 `
 
-const StyledLabel = styled(DefaultStyledLabel)``
+const StyledLabel = styled(DefaultStyledLabel)`
+    ${props => props.name === "Checkbox" && css`
+        position: relative;
+        cursor: pointer;
+        /* user-select: none; */
+    `}
+    `
 
 export default StyledLabel

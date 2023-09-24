@@ -10,6 +10,7 @@ import { Heading } from "../Heading";
 import { SubmitInput } from "../SubmitInput";
 import { CardTitle } from "../Card/CardTitle";
 import { Form } from "../Form";
+import { CheckboxInput, Checkmark } from "../CheckboxInput";
 
 
 const Page2 = () => {
@@ -23,13 +24,16 @@ const Page2 = () => {
             <Button variant="left">{'<'}</Button>
                 <CardTitle>Pick a course</CardTitle>
                 <Form>
-                    <Label > A1 speaking
-                        <input type="checkbox" />
-                    </Label>
+                    <Label label='Checkbox' >
+                        <CheckboxInput type="checkbox" checked />A1 speaking
+                        <Checkmark />
 
-                    <Label > A1 listening
-                        <input type="checkbox" />
-                    </Label>
+                    </Label> 
+
+                    <Label label='Checkbox'>
+                        <CheckboxInput type="checkbox" checked />A1 listening
+                        <Checkmark checked={true}/>
+                    </Label> 
             
                         <SubmitInput value="Buy"/>
            
