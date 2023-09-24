@@ -8,7 +8,7 @@ const DefaultStyledCheckmark = styled.div`
     width: 20px;
     border-radius: 100%;
     background: #e8e8e8;
-    box-shadow: 3px 3px 5px #c5c5c5, -3px -3px 5px #ffffff;
+    box-shadow: 5px 5px 10px #c5c5c5, -5px -5px 10px #ffffff;
     transition-duration: 0.5s;
     
     &:after {

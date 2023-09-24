@@ -11,7 +11,7 @@ import { Page1, Page2, Page3, Page4 } from './Pages';
 
 const App = () => {
 
-    const [activePage, setActivePage] = useState(2)
+    const [activePage, setActivePage] = useState(3)
     const { Provider } = CurrentPageContext
 
     const changePage = (variant) => {

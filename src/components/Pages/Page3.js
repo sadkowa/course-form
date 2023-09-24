@@ -1,5 +1,6 @@
-import React from "react";
-import Page from "./Page";
+import React, { useState } from "react";
+
+import { Page } from "./";
 import { Card } from "../Card";
 import { Button } from "../Button";
 import { Label } from "../Label";
@@ -10,10 +11,26 @@ import { Heading } from "../Heading";
 import { SubmitInput } from "../SubmitInput";
 import { TextInput } from "../TextInput";
 import { CardTitle } from "../Card/CardTitle";
+import styled from "styled-components";
 import { Form } from "../Form";
 
 
 const Page3 = () => {
+
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+
+    const changeHandler = (e) => {
+        
+    }
+
+    const submitHandler = (e)=> {
+        e.preventDefault()
+        console.log(e.target)
+
+    }
+
     return (
         <Page>
             <Header>
@@ -23,20 +40,20 @@ const Page3 = () => {
             <Card>
                 <Button variant="left">{'<'}</Button>
 
-                <Form>
+                <Form onSubmit={submitHandler}>
                 <Label label='firstName'>First Name
-                    <TextInput name='firstName' />
+                        <TextInput name='firstName' value={firstName} onChange={changeHandler} />
                 </Label>
                 <Label label='lastName'>Last Name
-                    <TextInput name='lastName' />
+                        <TextInput name='lastName' value={lastName} />
                 </Label>
                 <Label label='email'>Email
-                    <TextInput name='email' />
+                        <TextInput name='email' value={email} />
                 </Label>
                     <SubmitInput name='submit' value='Submit' />
                 </Form>
                 <Label>
-                    <ProgressBar value="100" max="100" />
+                    <ProgressBar value="66" max="100" />
                 </Label>
                 <Button variant="right">{'>'}</Button>
 
@@ -45,5 +62,7 @@ const Page3 = () => {
         </Page>
     )
 }
+
+
 
 export default Page3

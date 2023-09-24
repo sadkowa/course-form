@@ -8,6 +8,13 @@ const englishLevels = [
     { id: 7, mark: 'C2', name: 'Proficient' },
 ]
 
-const courses = ['Group classes - Spoken English Course', 'Personal Tutoring - Speaking Sessions"', 'Self-study course - Vocabulary Classes']
+const courses = [
+    { id: 1, name: 'Group classes - Spoken English Course' },
+    { id: 2, name: 'Personal Tutoring - Speaking Sessions' },
+    { id: 3, name: 'Self-study course - Vocabulary Classes' },
+    { id: 4, name: 'Extra-intensive speaking course' }
+]
 
-export { englishLevels, courses }
+const page2Error = 'Mark one field!'
+
+export { englishLevels, courses, page2Error }

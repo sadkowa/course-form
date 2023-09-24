@@ -5,6 +5,8 @@ import { Header } from "../Header";
 import { Img } from "../Img";
 import { Heading } from "../Heading";
 import { Text } from "../Text";
+import { Label } from "../Label"
+import { ProgressBar } from "../ProgressBar"
 
 
 const Page4 = () => {
@@ -16,8 +18,10 @@ const Page4 = () => {
             </Header>
             <Card>
                 <Text>We will contact you to set the first trial meeting. <br />See you soon!</Text>
+                <Label>
+                    <ProgressBar value="100" max="100" />
+                </Label>
             </Card>
-
         </Page>
     )
 }

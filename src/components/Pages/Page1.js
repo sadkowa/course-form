@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Page from "./Page";
+
+import { Page } from "./";
 import { Card } from "../Card";
 import { Button } from "../Button";
 import { Label } from "../Label";
@@ -16,7 +17,6 @@ import { englishLevels } from "../../providers/data";
 
 import { ActiveListContext } from "../../context/context";
 import { LangLevelContext } from "../../context/context";
-
 
 
 const Page1 = () => {
@@ -36,14 +36,12 @@ const Page1 = () => {
 
 const renderListItems = englishLevels.map(({ id, mark, name }) => {
     return (
-        <LangLevelProvider value={changeLangLevel}>
-            <ListItem key={id} mark={mark} name={name}>{mark} - {name}</ListItem>
+        <LangLevelProvider key={id} value={changeLangLevel}>
+            <ListItem mark={mark} name={name}>{mark} - {name}</ListItem>
         </LangLevelProvider>
     )
 })
 
-
-    // const dropdownContent= pickedLevel ? pickedLevel : `${englishLevels[0].mark} - ${englishLevels[0].name}`
 
     return (
         <Page>
@@ -60,7 +58,7 @@ const renderListItems = englishLevels.map(({ id, mark, name }) => {
                 </List>}
                 </ActiveListProvider>
                 <Label>
-                    <ProgressBar value="33" max="100" />
+                    <ProgressBar value="0" max="100" />
                 </Label>
                 <Button variant="right">{'>'}</Button>
             </Card>

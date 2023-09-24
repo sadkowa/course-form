@@ -9,7 +9,7 @@ const DefaultStyledTextInput = styled.input`
     };
     @media ${props => props.theme.media.mobile} {
         width: 100%;
-        padding: 2px;  
+        padding: 2px 10px;  
         margin-top: 10px;
         font-size: 1.3rem;
     }

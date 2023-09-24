@@ -1,11 +1,11 @@
 import React from "react";
 import StyledTextInput from "./TextInput.styled";
 
-const TextInput = ({ name }) => {
+const TextInput = ({ name, onChange }) => {
 
     return (
-        <><StyledTextInput type='text' name={name} />
-        </>
+        <StyledTextInput onChange={onChange} type='text' name={name} />
+        
     )
 }
 
