@@ -5,10 +5,15 @@ const DefaultStyledLabel = styled.label`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    @media ${props => props.theme.media.mobile} {
-        width: 60%;
-        margin: 10px auto;
-        font-size: 1.3rem;
+    width: 60%;
+    margin: 10px auto;
+    font-size: 1.3rem;
+
+    @media ${props => props.theme.media.tablet} {
+        font-size: 1.5rem;
+    }
+    @media ${props => props.theme.media.desktop} {
+        font-size: 1.7rem;
     }
 `
 

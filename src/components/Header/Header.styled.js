@@ -5,9 +5,7 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media ${props => props.theme.media.mobile} {
-        height: 120px ;
-    }
+    height: 120px ;  
 `
 
 export default StyledHeader

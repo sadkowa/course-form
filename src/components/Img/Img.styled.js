@@ -8,6 +8,11 @@ const StyledImg = styled.img.attrs({ src: `${flag}` })`
         top: 20px;
         right: 20px;
         width: 70px;
+} 
+    @media ${props => props.theme.media.tablet} {
+        top: 20px;
+        right: 20px;
+        width: 150px;
 }
 `
 

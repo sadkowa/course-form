@@ -12,6 +12,7 @@ import { CardTitle } from "../Card/CardTitle";
 import { List } from "../List";
 import { ListItem } from "../List";
 import { Dropdown } from "../Dropdown";
+import { Span } from '../Span'
 
 import { englishLevels } from "../../providers/data";
 
@@ -52,7 +53,7 @@ const renderListItems = englishLevels.map(({ id, mark, name }) => {
             <Card>
                 <CardTitle>Choose your English level</CardTitle>
                 <ActiveListProvider value={changeActiveList}>
-                    {!activeList && <Dropdown>{pickedLevel}&#x25BC;</Dropdown>}
+                    {!activeList && <Dropdown>{pickedLevel} <Span>&#x25BC;</Span></Dropdown>}
                     {activeList && <List>
                     {renderListItems}
                 </List>}

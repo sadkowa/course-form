@@ -6,6 +6,7 @@ const DefaultStyledCheckmark = styled.div`
     left: 0;
     height: 20px;
     width: 20px;
+    margin-bottom: 10px;
     border-radius: 100%;
     background: #e8e8e8;
     box-shadow: 5px 5px 10px #c5c5c5, -5px -5px 10px #ffffff;
@@ -32,6 +33,16 @@ const DefaultStyledCheckmark = styled.div`
         border-width: 0 1px 1px 0;
         transform: rotate(45deg);
    }
+
+   @media ${props => props.theme.media.tablet} {
+        height: 25px;
+        width: 25px;
+        margin-top: 5px;
+}
+    @media ${props => props.theme.media.desktop} {
+        height: 30px;
+        width: 30px;
+}
 `
 
 const StyledCheckmark = styled(DefaultStyledCheckmark)``
