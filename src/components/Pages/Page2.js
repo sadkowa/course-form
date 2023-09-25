@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Page from "./Page";
+
+import { Page } from "./";
 import { Card } from "../Card";
 import { Button } from "../Button";
 import { Label } from "../Label";
@@ -7,7 +8,7 @@ import { ProgressBar } from "../ProgressBar";
 import { Header } from "../Header";
 import { Img } from "../Img";
 import { Heading } from "../Heading";
-import { CardTitle } from "../Card/CardTitle";
+import { CardTitle } from "../Card";
 import { Form } from "../Form";
 import { CheckboxInput, Checkmark } from "../CheckboxInput";
 import { Error } from "../Error";
@@ -18,6 +19,7 @@ import { CheckedFieldContext } from "../../context/context";
 const Page2 = () => {
     const [checkedField, setCheckedField] = useState(null)
     const [errors, setErrors] = useState(null)
+
     const { Provider } = CheckedFieldContext
 
     const changeCheckedField = (id) => {
@@ -28,7 +30,8 @@ const Page2 = () => {
         return (
             <Provider key={id} value={changeCheckedField}>
                 <Label label='Checkbox'>
-                    <CheckboxInput type="checkbox" id={id} />{name}
+                    <CheckboxInput/>{name} 
+                    {/* jeśli zakomentuje powyzszą linijkę to checkbox i tak działa, więc nie wiem czy to ma sens */}
                     <Checkmark checked={id === checkedField} id={id} />
                 </Label>
             </Provider>
@@ -42,7 +45,7 @@ const Page2 = () => {
                 <Img />
             </Header>
             <Card>
-            <Button variant="left">{'<'}</Button>
+                <Button variant="left">&#10094;</Button>
                 <CardTitle>Pick a course</CardTitle>
                 <Form>
                     {renderFields}         
@@ -53,9 +56,8 @@ const Page2 = () => {
                 <Label>
                     <ProgressBar prevValue={0} value={33} max={100} />
                 </Label>
-                <Button setErrors={setErrors} error={page2Error} ifCanChangePage={checkedField} variant="right">{'>'}</Button>
+                <Button setErrors={setErrors} error={page2Error} ifCanChangePage={checkedField} variant="right">&#10095;</Button>
             </Card>
-
         </Page>
     )
 }

@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import StyledTextInput from "./TextInput.styled";
 import { Error } from "../Error";
 
-const TextInput = ({ name, value, setErrors, setFirstName = null, setLastName = null, setEmail = null }) => {
+const TextInput = ({ name, value, setFirstName = null, setLastName = null, setEmail = null }) => {
 
     const [error, setError] = useState()
 
-    // const errors = []
     const changeHandler = (name, e) => {
 
         name === 'firstName' && setFirstName(e.target.value)
@@ -17,17 +16,15 @@ const TextInput = ({ name, value, setErrors, setFirstName = null, setLastName = 
     const blurHandler = () => {
         if (name === 'firstName') {
             setError('')
-            if (value.length <= 0) {
-                
+            if (value.length <= 0) {          
                 setError(`Field ${name} is required! `)
-
             }
         }
         if (name === 'lastName') {
             setError('')
             if (value.length <= 0) {
                 setError(`Field ${name} is required! `)
-                          }
+            }
         }
         if (name === 'email') {
             setError('')
@@ -35,7 +32,6 @@ const TextInput = ({ name, value, setErrors, setFirstName = null, setLastName = 
             const reg = new RegExp(pattern)
             if (!reg.test(value)) {
                 setError(`Invalid email format `)
-
             }
         }
     }

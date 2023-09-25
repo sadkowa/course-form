@@ -53,29 +53,25 @@ const Page3 = () => {
                 <Img />
             </Header>
             <Card>
-                <Button variant="left">{'<'}</Button>
-
+                <Button variant="left">&#10094;</Button>
                 <Form onSubmit={submitHandler}>
-                <Label label='firstName'>First Name
-                        <TextInput name='firstName' value={firstName} setFirstName={setFirstName} />
-                </Label>
-                <Label label='lastName'>Last Name
-                        <TextInput name='lastName' value={lastName} setLastName={setLastName} />
-                </Label>
-                <Label label='email'>Email
-                        <TextInput name='email' value={email} setEmail={setEmail} />
-                </Label>
+                    <Label label='firstName'>First Name
+                            <TextInput name='firstName' value={firstName} setFirstName={setFirstName} />
+                    </Label>
+                    <Label label='lastName'>Last Name
+                            <TextInput name='lastName' value={lastName} setLastName={setLastName} />
+                    </Label>
+                    <Label label='email'>Email
+                            <TextInput name='email' value={email} setEmail={setEmail} />
+                    </Label>
                     <SubmitInput value='Submit' />
                 </Form>
                 <Label>
                     <ProgressBar prevValue={33} value={66} max={100} />
                 </Label>
             </Card>
-
         </Page>
     )
 }
-
-
 
 export default Page3

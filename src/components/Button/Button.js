@@ -9,7 +9,6 @@ const Button = (({ variant = '', children, ifCanChangePage = 'true', setErrors =
         if (variant === 'right' && ifCanChangePage) {
             changePage(variant)
         }
-
         else if (variant === 'left') changePage(variant)
         else if (error) setErrors(error)
     }

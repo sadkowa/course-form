@@ -12,7 +12,7 @@ const courses = [
     { id: 1, name: 'Group classes - Spoken English Course' },
     { id: 2, name: 'Personal Tutoring - Speaking Sessions' },
     { id: 3, name: 'Self-study course - Vocabulary Classes' },
-    { id: 4, name: 'Extra-intensive speaking course' }
+    { id: 4, name: 'Extra - intensive Speaking Course' }
 ]
 
 const page2Error = 'Mark one field!'

@@ -10,10 +10,10 @@ const DefaultStyledLabel = styled.label`
     font-size: 1.3rem;
 
     @media ${props => props.theme.media.tablet} {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     @media ${props => props.theme.media.desktop} {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
 `
 
@@ -21,7 +21,6 @@ const StyledLabel = styled(DefaultStyledLabel)`
     ${props => props.name === "Checkbox" && css`
         position: relative;
         cursor: pointer;
-        
     `}
     `
 

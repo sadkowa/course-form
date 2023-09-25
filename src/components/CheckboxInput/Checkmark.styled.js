@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const DefaultStyledCheckmark = styled.div`
+const StyledCheckmark = styled.div`
     position: relative;
     top: 0;
     left: 0;
@@ -44,7 +44,5 @@ const DefaultStyledCheckmark = styled.div`
         width: 30px;
 }
 `
-
-const StyledCheckmark = styled(DefaultStyledCheckmark)``
 
 export default StyledCheckmark

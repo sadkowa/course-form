@@ -6,7 +6,7 @@ const Dropdown = ({children }) => {
     const changeActiveList = useContext(ActiveListContext)
 
     return (
-        <StyledDropdown onClick={changeActiveList} type='submit' >{children}</StyledDropdown>
+        <StyledDropdown onClick={changeActiveList} >{children}</StyledDropdown>
     )
 }
 

@@ -4,7 +4,6 @@ const loadAnimation = keyframes`
     0% { width: var(--width1) }
     100% {width: var(--width2)}
 `
-
 const StyledProgressBar = styled.div`
     --calcWidth: 100%;
     --width1: calc(var(--calcWidth) * ${props => props.ratio1});

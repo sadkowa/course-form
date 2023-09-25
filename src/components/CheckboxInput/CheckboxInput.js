@@ -1,9 +1,9 @@
 import React from "react";
 import StyledCheckboxInput from "./CheckboxInput.styled";
 
-const CheckboxInput = ({ name, id }) => {
+const CheckboxInput = () => {
 
-    return <StyledCheckboxInput  type='checkbox' name={name} id={id} />
+    return <StyledCheckboxInput type="checkbox" />
 
 }
 

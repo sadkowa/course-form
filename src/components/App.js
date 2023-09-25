@@ -4,13 +4,13 @@ import ResetStyle from './global/Reset';
 import GlobalStyle from './global/Global';
 
 import themeSettings from './global/theme';
+
 import { ThemeProvider } from 'styled-components';
 import { CurrentPageContext } from '../context/context';
 
 import { Page1, Page2, Page3, Page4 } from './Pages';
 
 const App = () => {
-
     const [activePage, setActivePage] = useState(1)
     const { Provider } = CurrentPageContext
 
@@ -24,18 +24,18 @@ const App = () => {
     }
 
     return (
-    <>
-        <ResetStyle />
-        <GlobalStyle />
-        <ThemeProvider theme={themeSettings}>
-                <Provider value={changePage}>
-                    {activePage === 1 && <Page1  />}
-                    {activePage === 2 && <Page2 />}
-                    {activePage === 3 && <Page3 />}
-                    {activePage === 4 && <Page4 />}
-                </Provider>
-        </ThemeProvider>
-    </>
+        <>
+            <ResetStyle />
+            <GlobalStyle />
+            <ThemeProvider theme={themeSettings}>
+                    <Provider value={changePage}>
+                        {activePage === 1 && <Page1  />}
+                        {activePage === 2 && <Page2 />}
+                        {activePage === 3 && <Page3 />}
+                        {activePage === 4 && <Page4 />}
+                    </Provider>
+            </ThemeProvider>
+        </>
     )
 };
 

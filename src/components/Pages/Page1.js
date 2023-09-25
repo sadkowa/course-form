@@ -8,7 +8,7 @@ import { ProgressBar } from "../ProgressBar";
 import { Header } from "../Header";
 import { Img } from "../Img";
 import { Heading } from "../Heading";
-import { CardTitle } from "../Card/CardTitle";
+import { CardTitle } from "../Card";
 import { List } from "../List";
 import { ListItem } from "../List";
 import { Dropdown } from "../Dropdown";
@@ -22,6 +22,7 @@ import { LangLevelContext } from "../../context/context";
 
 const Page1 = () => {
     const initLevel = `${englishLevels[0].mark} - ${englishLevels[0].name}`
+
     const [activeList, setActiveList] = useState(false)
     const [pickedLevel, setPickedLevel] = useState(initLevel)
 
@@ -35,13 +36,13 @@ const Page1 = () => {
         setActiveList(prevState => !prevState)
     }
 
-const renderListItems = englishLevels.map(({ id, mark, name }) => {
-    return (
-        <LangLevelProvider key={id} value={changeLangLevel}>
-            <ListItem mark={mark} name={name}>{mark} - {name}</ListItem>
-        </LangLevelProvider>
-    )
-})
+    const renderListItems = englishLevels.map(({ id, mark, name }) => {
+        return (
+            <LangLevelProvider key={id} value={changeLangLevel}>
+                <ListItem mark={mark} name={name}>{mark} - {name}</ListItem>
+            </LangLevelProvider>
+        )
+    })
 
 
     return (
@@ -61,9 +62,8 @@ const renderListItems = englishLevels.map(({ id, mark, name }) => {
                 <Label>
                     <ProgressBar prevValue={0} value={0} max={100} />
                 </Label>
-                <Button variant="right">{'>'}</Button>
+                <Button variant="right">&#10095;</Button>
             </Card>
-
         </Page>
     )
 }

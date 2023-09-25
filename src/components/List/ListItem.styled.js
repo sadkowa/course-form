@@ -6,7 +6,6 @@ const StyledListItem = styled.li`
     padding: 2px;  
     margin: 0 auto 15px; 
     font-size: 1.3rem;
-
     ${({ theme }) => theme.primary}
     
     &:hover {
