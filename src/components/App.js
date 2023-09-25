@@ -11,11 +11,11 @@ import { Page1, Page2, Page3, Page4 } from './Pages';
 
 const App = () => {
 
-    const [activePage, setActivePage] = useState(3)
+    const [activePage, setActivePage] = useState(1)
     const { Provider } = CurrentPageContext
 
     const changePage = (variant) => {
-        if (variant === 'right') {
+        if (variant === 'right' || variant === 'submit') {
             setActivePage(prevState => prevState + 1)
         }
         if (variant === 'left') {

@@ -51,7 +51,7 @@ const Page2 = () => {
                     {errors}
                 </Error>}
                 <Label>
-                    <ProgressBar value="33" max="100" />
+                    <ProgressBar prevValue={0} value={33} max={100} />
                 </Label>
                 <Button setErrors={setErrors} error={page2Error} ifCanChangePage={checkedField} variant="right">{'>'}</Button>
             </Card>

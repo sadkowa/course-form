@@ -4,6 +4,7 @@ const DefaultStyledLabel = styled.label`
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     @media ${props => props.theme.media.mobile} {
         width: 60%;
         margin: 10px auto;
@@ -15,7 +16,7 @@ const StyledLabel = styled(DefaultStyledLabel)`
     ${props => props.name === "Checkbox" && css`
         position: relative;
         cursor: pointer;
-        /* user-select: none; */
+        
     `}
     `
 

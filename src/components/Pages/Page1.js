@@ -58,7 +58,7 @@ const renderListItems = englishLevels.map(({ id, mark, name }) => {
                 </List>}
                 </ActiveListProvider>
                 <Label>
-                    <ProgressBar value="0" max="100" />
+                    <ProgressBar prevValue={0} value={0} max={100} />
                 </Label>
                 <Button variant="right">{'>'}</Button>
             </Card>

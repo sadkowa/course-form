@@ -19,7 +19,7 @@ const Page4 = () => {
             <Card>
                 <Text>We will contact you to set the first trial meeting. <br />See you soon!</Text>
                 <Label>
-                    <ProgressBar value="100" max="100" />
+                    <ProgressBar prevValue={66} value={100} max={100}/>
                 </Label>
             </Card>
         </Page>

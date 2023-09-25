@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { Page } from "./";
 import { Card } from "../Card";
@@ -10,9 +10,9 @@ import { Img } from "../Img";
 import { Heading } from "../Heading";
 import { SubmitInput } from "../SubmitInput";
 import { TextInput } from "../TextInput";
-import { CardTitle } from "../Card/CardTitle";
-import styled from "styled-components";
 import { Form } from "../Form";
+
+import { CurrentPageContext } from "../../context/context";
 
 
 const Page3 = () => {
@@ -21,14 +21,29 @@ const Page3 = () => {
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
 
-    const changeHandler = (e) => {
-        
-    }
+    const changePage = useContext(CurrentPageContext)
 
     const submitHandler = (e)=> {
         e.preventDefault()
-        console.log(e.target)
+        const errorsList = []
 
+        if (firstName <= 0) {
+            errorsList.push(`Field First Name is required.`)
+        }
+
+        if (lastName <= 0) {
+            errorsList.push(`Field Last Name is required.`)
+        }
+
+        const pattern = /^[-\w.]+@([-\w]+\.)+[a-z]+$/i
+        const reg = new RegExp(pattern)
+        if (!reg.test(email)) {
+            errorsList.push(`Invalid email format.`)
+        }
+
+        if (errorsList.length > 0) {
+            alert(`Form filled with invalid data:\n ${errorsList.join('\n ')}`)
+        } else changePage('submit')
     }
 
     return (
@@ -42,21 +57,19 @@ const Page3 = () => {
 
                 <Form onSubmit={submitHandler}>
                 <Label label='firstName'>First Name
-                        <TextInput name='firstName' value={firstName} onChange={changeHandler} />
+                        <TextInput name='firstName' value={firstName} setFirstName={setFirstName} />
                 </Label>
                 <Label label='lastName'>Last Name
-                        <TextInput name='lastName' value={lastName} />
+                        <TextInput name='lastName' value={lastName} setLastName={setLastName} />
                 </Label>
                 <Label label='email'>Email
-                        <TextInput name='email' value={email} />
+                        <TextInput name='email' value={email} setEmail={setEmail} />
                 </Label>
-                    <SubmitInput name='submit' value='Submit' />
+                    <SubmitInput value='Submit' />
                 </Form>
                 <Label>
-                    <ProgressBar value="66" max="100" />
+                    <ProgressBar prevValue={33} value={66} max={100} />
                 </Label>
-                <Button variant="right">{'>'}</Button>
-
             </Card>
 
         </Page>
