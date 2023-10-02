@@ -31,7 +31,6 @@ const Page2 = () => {
             <Provider key={id} value={changeCheckedField}>
                 <Label label='Checkbox'>
                     <CheckboxInput/>{name} 
-                    {/* jeśli zakomentuje powyzszą linijkę to checkbox i tak działa, więc nie wiem czy to ma sens */}
                     <Checkmark checked={id === checkedField} id={id} />
                 </Label>
             </Provider>
