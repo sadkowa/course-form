@@ -1,18 +1,6 @@
 import React, { useState } from "react";
 
-import { Page } from "./";
-import { Card } from "../Card";
-import { Button } from "../Button";
-import { Label } from "../Label";
-import { ProgressBar } from "../ProgressBar";
-import { Header } from "../Header";
-import { Img } from "../Img";
-import { Heading } from "../Heading";
-import { CardTitle } from "../Card";
-import { List } from "../List";
-import { ListItem } from "../List";
-import { Dropdown } from "../Dropdown";
-import { Span } from '../Span'
+import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, List, ListItem, Dropdown, Span } from '../'
 
 import { englishLevels } from "../../providers/data";
 
@@ -48,7 +36,7 @@ const Page1 = () => {
     return (
         <Page>
             <Header>
-                <Heading>Let's start learning English with us!</Heading>
+                <Heading>Start learning English with us!</Heading>
                 <Img />
             </Header>
             <Card>

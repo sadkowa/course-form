@@ -40,7 +40,7 @@ const Page2 = () => {
     return (
         <Page>
             <Header>
-                <Heading>Let's choose one of our recommended courses</Heading>
+                <Heading>Choose one of our recommended courses</Heading>
                 <Img />
             </Header>
             <Card>
