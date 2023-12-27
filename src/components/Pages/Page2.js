@@ -1,17 +1,6 @@
 import React, { useState } from "react";
 
-import { Page } from "./";
-import { Card } from "../Card";
-import { Button } from "../Button";
-import { Label } from "../Label";
-import { ProgressBar } from "../ProgressBar";
-import { Header } from "../Header";
-import { Img } from "../Img";
-import { Heading } from "../Heading";
-import { CardTitle } from "../Card";
-import { Form } from "../Form";
-import { CheckboxInput, Checkmark } from "../CheckboxInput";
-import { Error } from "../Error";
+import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, Form, CheckboxInput, Checkmark, Error } from '../'
 
 import { courses, page2Error } from "../../providers/data";
 import { CheckedFieldContext } from "../../context/context";
