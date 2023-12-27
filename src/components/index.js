@@ -14,7 +14,6 @@ import { ProgressBar } from "./ProgressBar";
 import { Span } from "./Span";
 import { SubmitInput } from "./SubmitInput";
 import { Text } from "./Text";
-import { TextInput } from "./TextInput";
 
 export  {
     Button,
@@ -35,6 +34,5 @@ export  {
     ProgressBar, 
     Span, 
     SubmitInput, 
-    Text, 
-    TextInput
+    Text
 }
