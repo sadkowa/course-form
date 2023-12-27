@@ -1,16 +1,9 @@
 import React from "react";
 
-import { Page } from "./";
-import { Card } from "../Card";
-import { Header } from "../Header";
-import { Img } from "../Img";
-import { Heading } from "../Heading";
-import { Text } from "../Text";
-import { Label } from "../Label"
-import { ProgressBar } from "../ProgressBar"
+import { Page, Card, ProgressBar, Header, Img, Heading, Text, Label } from '..'
 
 
-const Page4 = () => {
+const Summary = () => {
     return (
         <Page>
             <Header>
@@ -20,11 +13,11 @@ const Page4 = () => {
             <Card>
                 <Text>We will contact you to set the first trial meeting. <br />See you soon!</Text>
                 <Label>
-                    <ProgressBar prevValue={66} value={100} max={100}/>
+                    <ProgressBar prevValue={66} value={100} max={100} />
                 </Label>
             </Card>
         </Page>
     )
 }
 
-export default Page4
+export default Summary

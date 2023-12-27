@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 
-import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, SubmitInput, TextInput, Form } from '../'
+import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, SubmitInput, TextInput, Form } from '..'
 
 import { CurrentPageContext } from "../../context/context";
 
 
-const Page3 = () => {
+const UserDataForm = () => {
 
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -13,7 +13,7 @@ const Page3 = () => {
 
     const changePage = useContext(CurrentPageContext)
 
-    const submitHandler = (e)=> {
+    const submitHandler = (e) => {
         e.preventDefault()
         const errorsList = []
 
@@ -46,13 +46,13 @@ const Page3 = () => {
                 <Button variant="left">&#10094;</Button>
                 <Form onSubmit={submitHandler}>
                     <Label label='firstName'>First Name
-                            <TextInput name='firstName' value={firstName} setFirstName={setFirstName} />
+                        <TextInput name='firstName' value={firstName} setFirstName={setFirstName} />
                     </Label>
                     <Label label='lastName'>Last Name
-                            <TextInput name='lastName' value={lastName} setLastName={setLastName} />
+                        <TextInput name='lastName' value={lastName} setLastName={setLastName} />
                     </Label>
                     <Label label='email'>Email
-                            <TextInput name='email' value={email} setEmail={setEmail} />
+                        <TextInput name='email' value={email} setEmail={setEmail} />
                     </Label>
                     <SubmitInput value='Submit' />
                 </Form>
@@ -64,4 +64,4 @@ const Page3 = () => {
     )
 }
 
-export default Page3
+export default UserDataForm

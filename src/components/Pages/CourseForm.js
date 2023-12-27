@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, Form, CheckboxInput, Checkmark, Error } from '../'
+import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, Form, CheckboxInput, Checkmark, Error } from '..'
 
 import { courses, page2Error } from "../../providers/data";
 import { CheckedFieldContext } from "../../context/context";
 
-const Page2 = () => {
+const CourseForm = () => {
     const [checkedField, setCheckedField] = useState(null)
     const [errors, setErrors] = useState(null)
 
@@ -19,7 +19,7 @@ const Page2 = () => {
         return (
             <Provider key={id} value={changeCheckedField}>
                 <Label label='Checkbox'>
-                    <CheckboxInput/>{name} 
+                    <CheckboxInput />{name}
                     <Checkmark checked={id === checkedField} id={id} />
                 </Label>
             </Provider>
@@ -36,7 +36,7 @@ const Page2 = () => {
                 <Button variant="left">&#10094;</Button>
                 <CardTitle>Pick a course</CardTitle>
                 <Form>
-                    {renderFields}         
+                    {renderFields}
                 </Form>
                 {errors && <Error>
                     {errors}
@@ -50,4 +50,4 @@ const Page2 = () => {
     )
 }
 
-export default Page2
+export default CourseForm

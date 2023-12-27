@@ -8,7 +8,7 @@ import themeSettings from './global/theme';
 import { ThemeProvider } from 'styled-components';
 import { CurrentPageContext } from '../context/context';
 
-import { Page1, Page2, Page3, Page4 } from './Pages';
+import { LevelPage, CourseForm, UserDataForm, Summary } from './Pages';
 
 const App = () => {
     const [activePage, setActivePage] = useState(1)
@@ -29,10 +29,10 @@ const App = () => {
             <GlobalStyle />
             <ThemeProvider theme={themeSettings}>
                     <Provider value={changePage}>
-                        {activePage === 1 && <Page1  />}
-                        {activePage === 2 && <Page2 />}
-                        {activePage === 3 && <Page3 />}
-                        {activePage === 4 && <Page4 />}
+                    {activePage === 1 && <LevelPage />}
+                    {activePage === 2 && <CourseForm />}
+                    {activePage === 3 && <UserDataForm />}
+                    {activePage === 4 && <Summary />}
                     </Provider>
             </ThemeProvider>
         </>

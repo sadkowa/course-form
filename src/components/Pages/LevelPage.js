@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, List, ListItem, Dropdown, Span } from '../'
+import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, List, ListItem, Dropdown, Span } from '..'
 
 import { englishLevels } from "../../providers/data";
 
@@ -8,7 +8,7 @@ import { ActiveListContext } from "../../context/context";
 import { LangLevelContext } from "../../context/context";
 
 
-const Page1 = () => {
+const LevelPage = () => {
     const initLevel = `${englishLevels[0].mark} - ${englishLevels[0].name}`
 
     const [activeList, setActiveList] = useState(false)
@@ -44,8 +44,8 @@ const Page1 = () => {
                 <ActiveListProvider value={changeActiveList}>
                     {!activeList && <Dropdown>{pickedLevel} <Span>&#x25BC;</Span></Dropdown>}
                     {activeList && <List>
-                    {renderListItems}
-                </List>}
+                        {renderListItems}
+                    </List>}
                 </ActiveListProvider>
                 <Label>
                     <ProgressBar prevValue={0} value={0} max={100} />
@@ -56,4 +56,4 @@ const Page1 = () => {
     )
 }
 
-export default Page1
+export default LevelPage
