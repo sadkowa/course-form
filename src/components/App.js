@@ -8,7 +8,7 @@ import themeSettings from './global/theme';
 import { ThemeProvider } from 'styled-components';
 import { CurrentPageContext } from '../context/context';
 
-import { LevelPage, CourseForm, UserDataForm, Summary } from './Pages';
+import { LevelPage, CourseForm, UserDataForm, Summary } from './views';
 
 const App = () => {
     const [activePage, setActivePage] = useState(3)
