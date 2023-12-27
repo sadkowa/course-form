@@ -45,7 +45,6 @@ const TextInput = ({ name, value, setFirstName = null, setLastName = null, setEm
                 type='text'
                 name={name}
             />
-            {error && <Error>{error}</Error>}
         </>
     )
 }

@@ -1,51 +1,70 @@
 import React, { useContext, useState } from "react";
 
-import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, SubmitInput, TextInput, Form } from '..'
+import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, SubmitInput, Form } from '..'
+import StyledTextInput from "../TextInput/TextInput.styled";
+import StyledError from "../Error/Error.styled";
 
 import { CurrentPageContext } from "../../context/context";
-import { initState, userDataFields } from "../../helpers/formData";
+
+import { initState, userDataFields, fieldValidate, formValidate } from "../../helpers/formData";
 
 
 const UserDataForm = () => {
-
-    // const [firstName, setFirstName] = useState('')
-    // const [lastName, setLastName] = useState('')
-    // const [email, setEmail] = useState('')
-    const [studentData, setStudentData] = useState(initState.userData)
+    const {userData} = initState
+    const [studentData, setStudentData] = useState(userData)
+    const [errors, setErrors] = useState({})
 
 
     const changePage = useContext(CurrentPageContext)
 
     const submitHandler = (e) => {
         e.preventDefault()
-        const errorsList = []
 
-        // if (firstName <= 0) {
-        //     errorsList.push(`Field First Name is required.`)
-        // }
+        const newErrors = formValidate(studentData);
+        setErrors(newErrors)
 
-        // if (lastName <= 0) {
-        //     errorsList.push(`Field Last Name is required.`)
-        // }
 
-        // const pattern = /^[-\w.]+@([-\w]+\.)+[a-z]+$/i
-        // const reg = new RegExp(pattern)
-        // if (!reg.test(email)) {
-        //     errorsList.push(`Invalid email format.`)
-        // }
+        if (Object.keys(newErrors).length === 0) {
+            changePage('submit')
+        } 
+    }
 
-        // if (errorsList.length > 0) {
-        //     alert(`Form filled with invalid data:\n ${errorsList.join('\n ')}`)
-        // } else changePage('submit')
+    const handleFieldChange = (e) => {
+        const { value, name } = e.target
+
+        setStudentData({
+            ...studentData,
+            [name]: value
+        })
+    }
+
+    const handleBlur = field => {
+        const { name } = field
+
+        const currentErrorMessage = fieldValidate(field, studentData)
+
+        setErrors({ ...errors, [name]: [currentErrorMessage] })
+    }
+
+    const errorRender = ([error]) => {
+
+        return <StyledError>{error}</StyledError>
     }
 
     const fieldsRender = () => {
 
         return userDataFields.map(field => {
             const { id, type, name, label, required } = field
+
             return (
-                <Label>{label}
-                    <TextInput name={name} value={studentData[name]} />
+                <Label key={id}>{label}
+                    {errors[name] && errorRender(errors[name])}
+                    <StyledTextInput
+                        value={studentData[name]}
+                        onChange={handleFieldChange}
+                        onBlur={() => handleBlur(field)}
+                        name={name}                    
+                    />
                 </Label>)
         })
     }
@@ -60,15 +79,6 @@ const UserDataForm = () => {
                 <Button variant="left">&#10094;</Button>
                 <Form onSubmit={submitHandler}>
                     {fieldsRender()}
-                    {/* <Label label='firstName'>First Name
-                        <TextInput name='firstName' value={firstName} setFirstName={setFirstName} />
-                    </Label>
-                    <Label label='lastName'>Last Name
-                        <TextInput name='lastName' value={lastName} setLastName={setLastName} />
-                    </Label>
-                    <Label label='email'>Email
-                        <TextInput name='email' value={email} setEmail={setEmail} />
-                    </Label>*/}
                     <SubmitInput value='Submit' /> 
                 </Form>
                 <Label>

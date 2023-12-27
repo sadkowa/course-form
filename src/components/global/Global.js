@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Roboto', Verdana, Tahoma, sans-serif;
-        font-size: 1.6rem;
         background-image: url(${photo});
         background-position: bottom;
         background-repeat: no-repeat;
