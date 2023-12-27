@@ -3,13 +3,16 @@ import React, { useContext, useState } from "react";
 import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, SubmitInput, TextInput, Form } from '..'
 
 import { CurrentPageContext } from "../../context/context";
+import { initState, userDataFields } from "../../helpers/formData";
 
 
 const UserDataForm = () => {
 
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
+    // const [firstName, setFirstName] = useState('')
+    // const [lastName, setLastName] = useState('')
+    // const [email, setEmail] = useState('')
+    const [studentData, setStudentData] = useState(initState.userData)
+
 
     const changePage = useContext(CurrentPageContext)
 
@@ -17,23 +20,34 @@ const UserDataForm = () => {
         e.preventDefault()
         const errorsList = []
 
-        if (firstName <= 0) {
-            errorsList.push(`Field First Name is required.`)
-        }
+        // if (firstName <= 0) {
+        //     errorsList.push(`Field First Name is required.`)
+        // }
 
-        if (lastName <= 0) {
-            errorsList.push(`Field Last Name is required.`)
-        }
+        // if (lastName <= 0) {
+        //     errorsList.push(`Field Last Name is required.`)
+        // }
 
-        const pattern = /^[-\w.]+@([-\w]+\.)+[a-z]+$/i
-        const reg = new RegExp(pattern)
-        if (!reg.test(email)) {
-            errorsList.push(`Invalid email format.`)
-        }
+        // const pattern = /^[-\w.]+@([-\w]+\.)+[a-z]+$/i
+        // const reg = new RegExp(pattern)
+        // if (!reg.test(email)) {
+        //     errorsList.push(`Invalid email format.`)
+        // }
 
-        if (errorsList.length > 0) {
-            alert(`Form filled with invalid data:\n ${errorsList.join('\n ')}`)
-        } else changePage('submit')
+        // if (errorsList.length > 0) {
+        //     alert(`Form filled with invalid data:\n ${errorsList.join('\n ')}`)
+        // } else changePage('submit')
+    }
+
+    const fieldsRender = () => {
+
+        return userDataFields.map(field => {
+            const { id, type, name, label, required } = field
+            return (
+                <Label>{label}
+                    <TextInput name={name} value={studentData[name]} />
+                </Label>)
+        })
     }
 
     return (
@@ -45,7 +59,8 @@ const UserDataForm = () => {
             <Card>
                 <Button variant="left">&#10094;</Button>
                 <Form onSubmit={submitHandler}>
-                    <Label label='firstName'>First Name
+                    {fieldsRender()}
+                    {/* <Label label='firstName'>First Name
                         <TextInput name='firstName' value={firstName} setFirstName={setFirstName} />
                     </Label>
                     <Label label='lastName'>Last Name
@@ -53,8 +68,8 @@ const UserDataForm = () => {
                     </Label>
                     <Label label='email'>Email
                         <TextInput name='email' value={email} setEmail={setEmail} />
-                    </Label>
-                    <SubmitInput value='Submit' />
+                    </Label>*/}
+                    <SubmitInput value='Submit' /> 
                 </Form>
                 <Label>
                     <ProgressBar prevValue={33} value={66} max={100} />
