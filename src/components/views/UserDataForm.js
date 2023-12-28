@@ -1,14 +1,14 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 
 import { Page, Card, Button, Label, ProgressBar, Header, SubmitInput, Form } from '..'
 import StyledTextInput from "../TextInput/TextInput.styled";
 import StyledError from "../Error/Error.styled";
 
-import { useDispatch } from "react-redux";
-import { actions } from "../../modules/reducers/activeItems.reducer";
-
 import { initState, userDataFields, fieldValidate, formValidate } from "../../helpers/formData";
 
+import { useDispatch } from "react-redux";
+import { actions as activeActions } from "../../modules/reducers/activeItems.reducer";
+import { actions } from "../../modules/reducers/courseForm.reducer";
 
 const UserDataForm = () => {
     const {userData} = initState
@@ -25,7 +25,8 @@ const UserDataForm = () => {
 
 
         if (Object.keys(newErrors).length === 0) {
-            dispatch(actions.increase())
+            dispatch(actions.setStudentData(studentData))
+            dispatch(activeActions.increase())
         } 
     }
 
@@ -47,12 +48,10 @@ const UserDataForm = () => {
     }
 
     const errorRender = ([error]) => {
-
         return <StyledError>{error}</StyledError>
     }
 
     const fieldsRender = () => {
-
         return userDataFields.map(field => {
             const { id, name, label } = field
 
@@ -64,7 +63,8 @@ const UserDataForm = () => {
                         onChange={handleFieldChange}
                         onBlur={() => handleBlur(field)}
                         name={name}/>
-                </Label>)
+                </Label>
+            )
         })
     }
 
