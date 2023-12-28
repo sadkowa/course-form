@@ -11,9 +11,10 @@ Functionalities:
 - It includes a dropdown list implemented using a solution different from select,
 - Validation occurs immediately after entering data.
 
-<img  src="./src/assets/Capture - page01.JPG"/>
-<img src="./src/assets/Capture - page02.JPG"/>
-<img src="./src/assets/Capture - page03.JPG"/>
+<img height='300px' src="./src/assets/Capture - page 01.JPG"/>
+<img height='300px' src="./src/assets/Capture - page 02.JPG"/>
+<img height='300px' src="./src/assets/Capture - page 03.JPG"/>
+<img height='300px' src="./src/assets/Capture - page 04.JPG"/>
 
 ---
 
@@ -21,11 +22,8 @@ Functionalities:
 
 In this project, I used:
 
-- Hooks:
-    - useState
-    - useContext
-- Context Api - passing data within the application
-- Styled Components
+- Redux - to manage state (separate storage for activate items and course form data)
+- Styled-components and Theme Provider for styling
 
 ---
 
