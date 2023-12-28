@@ -12,7 +12,9 @@ export const courseFormSlice = createSlice({
         changeActiveList(state) {
             state.activeList = !state.activeList
         },
-        
+        setEngLevel(state, action){
+            state.engLevel = action.payload
+        }
         // increase(state) {
         //     state.activePage += 1
         // },
