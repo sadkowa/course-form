@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import StyledCheckmark from "./Checkmark.styled";
-import { CheckedFieldContext } from "../../context/context";
 
+import { useDispatch } from "react-redux";
+import { actions } from "../../modules/reducers/courseForm.reducer";
 
-const Checkmark = ({ checked, id }) => {
-    const changeCheckedField = useContext(CheckedFieldContext)
+const Checkmark = ({ checked, name }) => {
+    const dispatch = useDispatch()
+
     const clickHandler = () => {
-        changeCheckedField(id)
+        dispatch(actions.pickCourse(name))
     }
 
     return <StyledCheckmark onClick={clickHandler} checked={checked} />

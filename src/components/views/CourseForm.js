@@ -3,26 +3,20 @@ import React, { useState } from "react";
 import { Page, Card, Button, Label, ProgressBar, Header, CardTitle, Form, CheckboxInput, Checkmark, Error } from '..'
 
 import { courses, pageError } from "../../providers/data";
-import { CheckedFieldContext } from "../../context/context";
+import { useSelector } from "react-redux";
 
 const CourseForm = () => {
-    const [checkedField, setCheckedField] = useState(null)
-    const [errors, setErrors] = useState(null)
-
-    const { Provider } = CheckedFieldContext
-
-    const changeCheckedField = (id) => {
-        setCheckedField(id)
-    }
+    const { pickedCourse } = useSelector(state => state.courseForm)
+    const [error, setError] = useState(null)
 
     const renderFields = courses.map(({ id, name }) => {
         return (
-            <Provider key={id} value={changeCheckedField}>
-                <Label label='Checkbox'>
-                    <CheckboxInput />{name}
-                    <Checkmark checked={id === checkedField} id={id} />
-                </Label>
-            </Provider>
+            <Label key={id} label='Checkbox'>
+                <CheckboxInput />{name}
+                <Checkmark
+                    checked={name === pickedCourse}
+                    name={name} />
+            </Label>
         )
     })
 
@@ -35,14 +29,14 @@ const CourseForm = () => {
                 <Form>
                     {renderFields}
                 </Form>
-                {errors && <Error>{errors}</Error>}
+                {error && <Error>{error}</Error>}
                 <Label>
                     <ProgressBar prevValue={0} value={33} max={100} />
                 </Label>
                 <Button
-                    setErrors={setErrors}
-                    error={pageError}
-                    ifCanChangePage={checkedField}
+                    setError={setError}
+                    errorMessage={pageError}
+                    ifCanChangePage={pickedCourse}
                     variant="right">
                     &#10095;
                 </Button>

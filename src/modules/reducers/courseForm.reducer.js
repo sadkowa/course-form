@@ -14,13 +14,11 @@ export const courseFormSlice = createSlice({
         },
         setEngLevel(state, action){
             state.engLevel = action.payload
+        },
+        pickCourse(state, action) {
+            state.pickedCourse = action.payload
         }
-        // increase(state) {
-        //     state.activePage += 1
-        // },
-        // decrease(state) {
-        //     state.activePage -= 1
-        // }
+
     }
 })
 
