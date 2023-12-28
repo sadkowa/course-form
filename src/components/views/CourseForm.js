@@ -41,7 +41,13 @@ const CourseForm = () => {
                 <Label>
                     <ProgressBar prevValue={0} value={33} max={100} />
                 </Label>
-                <Button setErrors={setErrors} error={page2Error} ifCanChangePage={checkedField} variant="right">&#10095;</Button>
+                <Button
+                    setErrors={setErrors}
+                    error={page2Error}
+                    ifCanChangePage={checkedField}
+                    variant="right">
+                    &#10095;
+                </Button>
             </Card>
         </Page>
     )

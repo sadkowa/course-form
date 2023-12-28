@@ -5,6 +5,10 @@ import StyledTextInput from "../TextInput/TextInput.styled";
 import StyledError from "../Error/Error.styled";
 
 import { CurrentPageContext } from "../../context/context";
+import { useSelector, useDispatch } from "react-redux";
+import { actions } from "../../modules/reducers/activePage.reducer";
+
+
 
 import { initState, userDataFields, fieldValidate, formValidate } from "../../helpers/formData";
 
@@ -13,6 +17,9 @@ const UserDataForm = () => {
     const {userData} = initState
     const [studentData, setStudentData] = useState(userData)
     const [errors, setErrors] = useState({})
+
+    const dispatch = useDispatch()
+    const activePage = useSelector(state => state.activePage)
 
 
     const changePage = useContext(CurrentPageContext)
@@ -25,7 +32,8 @@ const UserDataForm = () => {
 
 
         if (Object.keys(newErrors).length === 0) {
-            changePage('submit')
+            // changePage('submit')
+            dispatch(actions.increase())
         } 
     }
 
