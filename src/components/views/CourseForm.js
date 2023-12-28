@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Page, Card, Button, Label, ProgressBar, Header, CardTitle, Form, CheckboxInput, Checkmark, Error } from '..'
 
-import { courses, page2Error } from "../../providers/data";
+import { courses, pageError } from "../../providers/data";
 import { CheckedFieldContext } from "../../context/context";
 
 const CourseForm = () => {
@@ -35,15 +35,13 @@ const CourseForm = () => {
                 <Form>
                     {renderFields}
                 </Form>
-                {errors && <Error>
-                    {errors}
-                </Error>}
+                {errors && <Error>{errors}</Error>}
                 <Label>
                     <ProgressBar prevValue={0} value={33} max={100} />
                 </Label>
                 <Button
                     setErrors={setErrors}
-                    error={page2Error}
+                    error={pageError}
                     ifCanChangePage={checkedField}
                     variant="right">
                     &#10095;

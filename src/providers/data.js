@@ -15,6 +15,6 @@ const courses = [
     { id: 4, name: 'Extra - intensive Speaking Course' }
 ]
 
-const page2Error = 'Mark one field!'
+const pageError = 'Mark one field!'
 
-export { englishLevels, courses, page2Error }
+export { englishLevels, courses, pageError }

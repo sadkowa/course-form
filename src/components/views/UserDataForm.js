@@ -1,14 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, {  useState } from "react";
 
 import { Page, Card, Button, Label, ProgressBar, Header, SubmitInput, Form } from '..'
 import StyledTextInput from "../TextInput/TextInput.styled";
 import StyledError from "../Error/Error.styled";
 
-import { CurrentPageContext } from "../../context/context";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { actions } from "../../modules/reducers/activePage.reducer";
-
-
 
 import { initState, userDataFields, fieldValidate, formValidate } from "../../helpers/formData";
 
@@ -19,10 +16,6 @@ const UserDataForm = () => {
     const [errors, setErrors] = useState({})
 
     const dispatch = useDispatch()
-    const activePage = useSelector(state => state.activePage)
-
-
-    const changePage = useContext(CurrentPageContext)
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -32,7 +25,6 @@ const UserDataForm = () => {
 
 
         if (Object.keys(newErrors).length === 0) {
-            // changePage('submit')
             dispatch(actions.increase())
         } 
     }
@@ -62,7 +54,7 @@ const UserDataForm = () => {
     const fieldsRender = () => {
 
         return userDataFields.map(field => {
-            const { id, type, name, label, required } = field
+            const { id, name, label } = field
 
             return (
                 <Label key={id}>{label}
@@ -71,8 +63,7 @@ const UserDataForm = () => {
                         value={studentData[name]}
                         onChange={handleFieldChange}
                         onBlur={() => handleBlur(field)}
-                        name={name}                    
-                    />
+                        name={name}/>
                 </Label>)
         })
     }
