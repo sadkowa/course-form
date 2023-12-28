@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, SubmitInput, Form } from '..'
+import { Page, Card, Button, Label, ProgressBar, Header, SubmitInput, Form } from '..'
 import StyledTextInput from "../TextInput/TextInput.styled";
 import StyledError from "../Error/Error.styled";
 
@@ -71,10 +71,7 @@ const UserDataForm = () => {
 
     return (
         <Page>
-            <Header>
-                <Heading>Fill in the form to schedule the first trial lesson</Heading>
-                <Img />
-            </Header>
+            <Header name="Fill in the form to schedule the first trial lesson" />
             <Card>
                 <Button variant="left">&#10094;</Button>
                 <Form onSubmit={submitHandler}>

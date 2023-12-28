@@ -1,23 +1,16 @@
-import styled from "styled-components";
-// import flag from './../../images/flag.png'
-
-// const StyledImg = styled.img.attrs({ src: `${flag}` })`
-// Nie muszę dodawać atrybutów jak wyżej? Wystarczy wpisać atrybuty jako propsy w pliku Img.js?
+import styled, {css} from "styled-components";
 
 const StyledImg = styled.img`
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    width: 70px;
-    z-index: -1;
+    width: 40px;
+    margin: 5px;
+
+    ${({ reversed }) => reversed && css`transform: scale(-1, 1)` };
 
     @media ${props => props.theme.media.tablet} {
-        width: 150px;
+        width: 60px;
 } 
     @media ${props => props.theme.media.desktop} {
-        top: 30px;
-        right: 0;
-        width: 200px;
+        width: 70px;
 }
 `
 

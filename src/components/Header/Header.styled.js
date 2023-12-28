@@ -5,15 +5,17 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px ; 
-    
+    width: 90%;
+    height: 60px ; 
+    margin: 0 auto;
+    padding-top:10px; 
+
     @media ${props => props.theme.media.tablet} {
-        width: 90%;
-        margin: 0 auto;
+        padding-top: 20px
 }
     @media ${props => props.theme.media.desktop} {
         width: 80%;
-        margin: 0 auto;
+        padding-top: 30px        
 }
 `
 

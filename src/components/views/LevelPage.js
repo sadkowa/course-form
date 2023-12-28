@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, List, ListItem, Dropdown, Span } from '..'
+import { Page, Card, Button, Label, ProgressBar, Header, CardTitle, List, ListItem, Dropdown, Span } from '..'
 
 import { englishLevels } from "../../providers/data";
 
@@ -35,10 +35,7 @@ const LevelPage = () => {
 
     return (
         <Page>
-            <Header>
-                <Heading>Start learning English with us!</Heading>
-                <Img />
-            </Header>
+            <Header name='Start learning English with us!'/>
             <Card>
                 <CardTitle>Choose your English level</CardTitle>
                 <ActiveListProvider value={changeActiveList}>

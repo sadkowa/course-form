@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Page, Card, Button, Label, ProgressBar, Header, Img, Heading, CardTitle, Form, CheckboxInput, Checkmark, Error } from '..'
+import { Page, Card, Button, Label, ProgressBar, Header, CardTitle, Form, CheckboxInput, Checkmark, Error } from '..'
 
 import { courses, page2Error } from "../../providers/data";
 import { CheckedFieldContext } from "../../context/context";
@@ -28,10 +28,7 @@ const CourseForm = () => {
 
     return (
         <Page>
-            <Header>
-                <Heading>Choose one of our recommended courses</Heading>
-                <Img />
-            </Header>
+            <Header name='Choose one of our recommended courses' />
             <Card>
                 <Button variant="left">&#10094;</Button>
                 <CardTitle>Pick a course</CardTitle>

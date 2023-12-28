@@ -1,15 +1,12 @@
 import React from "react";
 
-import { Page, Card, ProgressBar, Header, Img, Heading, Text, Label } from '..'
+import { Page, Card, ProgressBar, Header, Text, Label } from '..'
 
 
 const Summary = () => {
     return (
         <Page>
-            <Header>
-                <Heading>Thank you for completing the form!</Heading>
-                <Img />
-            </Header>
+            <Header name="Thank you for completing the form!" />
             <Card>
                 <Text>We will contact you to set the first trial meeting. <br />See you soon!</Text>
                 <Label>
