@@ -11,8 +11,8 @@ const initState = {
 }
 
 const userDataFields = [
-    { id: uuid(), type: 'text', name: "firstName", label: 'First Name', required: true },
-    { id: uuid(), type: 'text', name: "lastName", label: 'Last Name', required: true },
+    { id: uuid(), type: 'text', name: "firstName", label: 'First name', required: true },
+    { id: uuid(), type: 'text', name: "lastName", label: 'Last name', required: true },
     { id: uuid(), type: 'text', name: "email", label: 'Email', required: true, pattern: /^[-\w.]+@([-\w]+\.)+[a-z]+$/i }
 ]
 

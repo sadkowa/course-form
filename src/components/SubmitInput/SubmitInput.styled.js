@@ -6,8 +6,6 @@ const StyledSubmitInput = styled.input`
     margin: 40px auto; 
     padding: 8px; 
     font-size: 1.4rem; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
 
     &:hover {
         ${({ theme }) => theme.hover}
