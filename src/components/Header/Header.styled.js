@@ -6,13 +6,10 @@ const StyledHeader = styled.header`
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 60px ; 
+    min-height: 60px ; 
     margin: 0 auto;
-    padding-top:10px; 
+    padding-top: 30px; 
 
-    @media ${props => props.theme.media.tablet} {
-        padding-top: 20px
-}
     @media ${props => props.theme.media.desktop} {
         width: 80%;
         padding-top: 30px        

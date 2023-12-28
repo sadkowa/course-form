@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const StyledHeading = styled.h1`
     text-align: center;
-    /* width: 60%; */
-    font-size: 2.2rem;
+    vertical-align: center;
+    font-size: 1.8rem;
 
     @media ${props => props.theme.media.tablet} {
         font-size: 2.5rem;

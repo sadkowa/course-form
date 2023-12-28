@@ -15,11 +15,12 @@ const StyledCard = styled.div`
                  -5px -5px 5px #fff;
 
     @media ${props => props.theme.media.tablet} {
-        margin: 30px auto;
+        margin-top: 30px;
         min-height: 500px;
     }     
     @media ${props => props.theme.media.desktop} {
         min-height: 550px;
+        margin-top: 50px;
     }           
 `
 

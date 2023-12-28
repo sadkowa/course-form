@@ -6,7 +6,7 @@ const DefaultStyledLabel = styled.label`
     align-items: center;
     text-align: center;
     width: 60%;
-    margin: 10px auto;
+    margin: 5px auto;
     font-size: 1.3rem;
 
     @media ${props => props.theme.media.tablet} {
