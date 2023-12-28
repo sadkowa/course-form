@@ -7,7 +7,7 @@ const StyledCard = styled.div`
     width: 80%;
     margin: 20px auto;
     max-width: 600px;
-    min-height: 450px;
+    min-height: ${({option})=> {option==='summary' ? '100px' : '450px'}};
     padding: 20px 0;
     border-radius: ${props => props.theme.primary.borderRadius};
     background-color: ${props => props.theme.primary.backgroundColor};
@@ -16,11 +16,11 @@ const StyledCard = styled.div`
 
     @media ${props => props.theme.media.tablet} {
         margin-top: 30px;
-        min-height: 500px;
+        min-height: ${({option})=> {option==='summary' ? '100px' : '500px'}}
     }     
     @media ${props => props.theme.media.desktop} {
-        min-height: 550px;
-        margin-top: 50px;
+        min-height: ${({option})=> {option==='summary' ? '100px' : '550px'}};
+        margin-top: 40px;
     }           
 `
 
