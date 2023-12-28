@@ -11,12 +11,11 @@ const Summary = () => {
             <Card>
                 <Card option='summary'>
                     <CardTitle>Summary:</CardTitle>
-
                     <Label>Your english level: {engLevel}</Label>
                     <Label>Picked course: {pickedCourse}</Label>
                     <Label>Your name: {formState.firstName} {formState.lastName}</Label>
+                    <Label>Your email: {formState.email}</Label>
                 </Card>
-
                 <Text>We will contact you to set the first trial meeting. <br />See you soon!</Text>
                 <Label>
                     <ProgressBar prevValue={66} value={100} max={100} />
