@@ -2,7 +2,7 @@ import React from "react";
 import StyledButton from "./Button.styled";
 
 import { useDispatch } from "react-redux";
-import { actions } from "../../modules/reducers/activePage.reducer";
+import { actions } from "../../modules/reducers/activeItems.reducer";
 
 const Button = (({ variant = '', children, ifCanChangePage = true, setError = null, errorMessage = null }) => {
     const dispatch = useDispatch()

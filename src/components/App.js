@@ -11,7 +11,7 @@ import { LevelPage, CourseForm, UserDataForm, Summary } from './views';
 import { useSelector } from 'react-redux';
 
 const App = () => {
-    const activePage = useSelector(state => state.activePage.page)
+    const activePage = useSelector(state => state.activeItems.page)
 
     return (
         <>

@@ -1,14 +1,13 @@
 import React from "react";
 
 import { Page, Card, Button, Label, ProgressBar, Header, CardTitle, List, ListItem, Dropdown, Span } from '..'
-
 import { englishLevels } from "../../providers/data";
-
 import { useSelector } from "react-redux";
 
 
 const LevelPage = () => {
-    const { engLevel, activeList } = useSelector(state => state.courseForm)
+    const { engLevel } = useSelector(state => state.courseForm)
+    const { activeList } = useSelector(state => state.activeItems)
 
     const renderListItems = englishLevels.map(({ id, mark, name }) => {
         return (

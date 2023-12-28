@@ -3,13 +3,14 @@ import StyledListItem from "./ListItem.styled";
 
 import { useDispatch } from "react-redux";
 import { actions } from "../../modules/reducers/courseForm.reducer";
+import { actions as activeActions} from "../../modules/reducers/activeItems.reducer";
 
 const ListItem = ({mark, name, children})=> {
 
     const dispatch = useDispatch()
 
     const clickHandler = ()=> {
-        dispatch(actions.changeActiveList())
+        dispatch(activeActions.changeActiveList())
 
         const currentLevel = `${mark} - ${name}`
         dispatch(actions.setEngLevel(currentLevel))

@@ -5,7 +5,7 @@ import StyledTextInput from "../TextInput/TextInput.styled";
 import StyledError from "../Error/Error.styled";
 
 import { useDispatch } from "react-redux";
-import { actions } from "../../modules/reducers/activePage.reducer";
+import { actions } from "../../modules/reducers/activeItems.reducer";
 
 import { initState, userDataFields, fieldValidate, formValidate } from "../../helpers/formData";
 

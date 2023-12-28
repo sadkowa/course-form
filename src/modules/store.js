@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit"
-import { activePageSlice } from "./reducers/activePage.reducer"
+import { activeItemsSlice } from "./reducers/activeItems.reducer"
 import { courseFormSlice } from "./reducers/courseForm.reducer"
 
 export const store = configureStore({
     reducer: {
-        activePage: activePageSlice.reducer,
+        activeItems: activeItemsSlice.reducer,
         courseForm: courseFormSlice.reducer
     }
 })
