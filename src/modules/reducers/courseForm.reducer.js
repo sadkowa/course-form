@@ -11,7 +11,7 @@ export const courseFormSlice = createSlice({
     reducers: {
         changeActiveList(state) {
             state.activeList = !state.activeList
-        }
+        },
         
         // increase(state) {
         //     state.activePage += 1
