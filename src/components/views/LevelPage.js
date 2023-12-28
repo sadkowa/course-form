@@ -4,17 +4,19 @@ import { Page, Card, Button, Label, ProgressBar, Header, CardTitle, List, ListIt
 
 import { englishLevels } from "../../providers/data";
 
-import { ActiveListContext } from "../../context/context";
+// import { ActiveListContext } from "../../context/context";
 import { LangLevelContext } from "../../context/context";
+import { useSelector } from "react-redux";
 
 
 const LevelPage = () => {
-    const initLevel = `${englishLevels[0].mark} - ${englishLevels[0].name}`
+    const initLevel =  useSelector(state=> state.courseForm.engLevel)
 
-    const [activeList, setActiveList] = useState(false)
+    // const [activeList, setActiveList] = useState(false)
+    const {activeList} = useSelector(state=> state.courseForm)
     const [pickedLevel, setPickedLevel] = useState(initLevel)
 
-    const { Provider: ActiveListProvider } = ActiveListContext
+    // const { Provider: ActiveListProvider } = ActiveListContext
     const { Provider: LangLevelProvider } = LangLevelContext
 
     const changeLangLevel = (name) => {
@@ -38,12 +40,12 @@ const LevelPage = () => {
             <Header name='Start learning English with us!'/>
             <Card>
                 <CardTitle>Choose your English level</CardTitle>
-                <ActiveListProvider value={changeActiveList}>
+                {/* <ActiveListProvider value={changeActiveList}> */}
                     {!activeList && <Dropdown>{pickedLevel} <Span>&#x25BC;</Span></Dropdown>}
                     {activeList && <List>
                         {renderListItems}
                     </List>}
-                </ActiveListProvider>
+                {/* </ActiveListProvider> */}
                 <Label>
                     <ProgressBar prevValue={0} value={0} max={100} />
                 </Label>

@@ -1,12 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import StyledDropdown from "./Dropdown.styled";
-import { ActiveListContext } from "../../context/context";
+
+import { useDispatch } from "react-redux";
+import { actions } from "../../modules/reducers/courseForm.reducer";
 
 const Dropdown = ({children }) => {
-    const changeActiveList = useContext(ActiveListContext)
+    const dispatch = useDispatch()
+    const clickHandler = () => {
+        dispatch(actions.changeActiveList())
+    }
 
     return (
-        <StyledDropdown onClick={changeActiveList} >{children}</StyledDropdown>
+        <StyledDropdown onClick={clickHandler} >{children}</StyledDropdown>
     )
 }
 

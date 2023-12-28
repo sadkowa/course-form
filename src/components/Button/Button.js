@@ -16,7 +16,7 @@ const Button = (({ variant = '', children, ifCanChangePage = 'true', setErrors =
     //     else if (error) setErrors(error)
     // }
     const dispatch = useDispatch()
-    const activePage = useSelector(state => state.activePage)
+    const activePage = useSelector(state => state.activePage.page)
 
 
     const clickHandler = () => {
