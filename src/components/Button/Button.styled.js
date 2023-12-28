@@ -10,7 +10,7 @@ const DefaultStyledButton = styled.button`
     ${({ theme }) => theme.primary}
 
     &:hover {
-        background-color: #e6e6e6
+        ${({ theme }) => theme.hover}
     }
     &:active {
         ${({ theme }) => theme.pressed}

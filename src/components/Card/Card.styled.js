@@ -12,7 +12,7 @@ const StyledCard = styled.div`
     border-radius: ${props => props.theme.primary.borderRadius};
     background-color: ${props => props.theme.primary.backgroundColor};
     box-shadow:  5px 5px 5px #aeaeae,
-                 -5px -5px 5px #eeeeee;
+                 -5px -5px 5px #fff;
 
     @media ${props => props.theme.media.tablet} {
         margin: 30px auto;

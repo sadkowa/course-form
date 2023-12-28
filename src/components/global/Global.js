@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         background-image: url(${photo});
         background-position: bottom;
         background-repeat: no-repeat;
-        background-size: contain
+        background-size: contain;
     }
 `;
 

@@ -8,9 +8,10 @@ const StyledCheckmark = styled.div`
     width: 20px;
     margin-bottom: 10px;
     border-radius: 100%;
-    background: #e8e8e8;
+    background: #efefef;
     box-shadow: 5px 5px 10px #c5c5c5, -5px -5px 10px #ffffff;
     transition-duration: 0.5s;
+    cursor: pointer;
     
     &:after {
         content: "";

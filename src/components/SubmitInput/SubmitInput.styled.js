@@ -10,7 +10,7 @@ const StyledSubmitInput = styled.input`
     letter-spacing: 2px;
 
     &:hover {
-        background-color: #e6e6e6    
+        ${({ theme }) => theme.hover}
     }
     &:active {
         ${({ theme }) => theme.pressed}

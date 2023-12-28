@@ -9,7 +9,7 @@ const StyledDropdown = styled.button`
     font-size: 1.3rem;
   
     &:hover {
-        background-color: #e6e6e6    
+        ${({ theme }) => theme.hover}
     }
 
     &:active {

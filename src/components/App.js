@@ -11,7 +11,7 @@ import { CurrentPageContext } from '../context/context';
 import { LevelPage, CourseForm, UserDataForm, Summary } from './views';
 
 const App = () => {
-    const [activePage, setActivePage] = useState(3)
+    const [activePage, setActivePage] = useState(1)
     const { Provider } = CurrentPageContext
 
     const changePage = (variant) => {
