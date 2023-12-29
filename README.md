@@ -11,11 +11,11 @@ Functionalities:
 - It includes a dropdown list implemented using a solution different from select,
 - Validation occurs immediately after entering data.
 
-<div style="display:flex; width: 100%; gap:5px">
-    <img style="width:25%; height: auto" src="./src/assets/Capture - page 01.JPG"/>
-    <img style="width:25%; height: auto" src="./src/assets/Capture - page 02.JPG"/>
-    <img style="width:25%; height: auto" src="./src/assets/Capture - page 03.JPG"/>
-    <img style="width:25%; height: auto" src="./src/assets/Capture - page 04.JPG"/>
+<div style="display: flex; width: 100%; gap: 5px">
+    <img style="width: 23%; height: auto" src="./src/assets/Capture - page 01.JPG"/>
+    <img style="width: 23%; height: auto" src="./src/assets/Capture - page 02.JPG"/>
+    <img style="width: 23%; height: auto" src="./src/assets/Capture - page 03.JPG"/>
+    <img style="width: 23%; height: auto" src="./src/assets/Capture - page 04.JPG"/>
 </div>
 
 ---
