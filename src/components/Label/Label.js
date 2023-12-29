@@ -7,7 +7,7 @@ const Label = (props) => {
     }
 
     return (
-        <StyledLabel onClick={onClick}>
+        <StyledLabel name={props.name} onClick={onClick}>
             {props.children}
         </StyledLabel>)
 }

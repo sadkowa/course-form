@@ -13,6 +13,7 @@ import { Page } from "./views";
 import { ProgressBar } from "./ProgressBar";
 import { Span } from "./Span";
 import { SubmitInput } from "./SubmitInput";
+import { SummaryInfo } from "./SummaryInfo";
 import { Text } from "./Text";
 
 export  {
@@ -34,5 +35,6 @@ export  {
     ProgressBar, 
     Span, 
     SubmitInput, 
+    SummaryInfo,
     Text
 }

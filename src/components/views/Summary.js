@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Page, Card, ProgressBar, Header, Text, Label, CardTitle, List, ListItem } from '..'
+import { Page, Card, ProgressBar, Header, Text, Label, CardTitle, SummaryInfo } from '..'
 import { useSelector } from "react-redux";
 
 const Summary = () => {
@@ -11,10 +11,10 @@ const Summary = () => {
             <Card>
                 <Card option='summary'>
                     <CardTitle>Summary:</CardTitle>
-                    <Label>Your english level: {engLevel}</Label>
-                    <Label>Picked course: {pickedCourse}</Label>
-                    <Label>Your name: {formState.firstName} {formState.lastName}</Label>
-                    <Label>Your email: {formState.email}</Label>
+                    <Label name='summary'>Your english level: <SummaryInfo>{engLevel}</SummaryInfo></Label>
+                    <Label name='summary'>Picked course: <SummaryInfo>{pickedCourse}</SummaryInfo></Label>
+                    <Label name='summary'>Your name: <SummaryInfo>{formState.firstName} {formState.lastName}</SummaryInfo> </Label>
+                    <Label name='summary'>Your email: <SummaryInfo>{formState.email}</SummaryInfo></Label>
                 </Card>
                 <Text>We will contact you to set the first trial meeting. <br />See you soon!</Text>
                 <Label>
